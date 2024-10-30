@@ -1,0 +1,201 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+ 
+}
+.container{
+position: relative;
+    margin-top: 200px;
+    width: 1200px;
+    height: 700px;
+   position: relative;
+    background-color: #887673;
+   border: 2px solid #000;
+   border-radius: 20px;
+   box-shadow:0 0 8px #000;
+}
+.form-human_container{
+position: absolute;
+top: 100px;
+right: 70px;
+
+
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    
+}
+.inputs-form_input{
+    font-size: 20px;
+    margin: 20px;
+    width: 420px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #f3eae8;
+    box-shadow: 0 0 4px #60707d;
+    padding: 7px;
+ 
+    outline: none;
+}
+
+.inputs-form_input::placeholder{
+padding-left: 8px;
+font-family: sans-serif;
+font-size: 20px;
+color: #310a0b ;
+
+
+ }
+ input:hover{
+  transition: all .2s ease-in-out;
+  transform: scale(1.04);
+ }
+
+#titulo1{
+  text-shadow: 0 0 2px #f3eae8;
+    font-size: 60px;
+    color: #f3eae8;
+    position: relative;
+    left: 60px;
+    margin-bottom: 20px;
+
+
+}
+.botones-form{
+
+display: inline-block;
+height: 30px;
+
+}
+
+.buttons-iniciar-sesion{
+width: 100%;
+margin: 20px;
+padding: 10px;
+border: 1px solid #310a0b;
+border-radius: 15px;
+color: #fff;
+font-size: 20px;
+box-shadow: 0 0 4px #310a0b;
+
+}
+#buton-crear-cuenta{
+    background-color: #fff;
+    color: #310a0b;
+}
+.buttons-iniciar-sesion:hover {
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+    background-color: #4d5b64; /* Cambia el color de fondo al pasar el mouse */
+  }
+  
+  #buton-crear-cuenta {
+    background-color: #f3eae8;
+    color: #310a0b;
+    border: 1px solid #f3eae8;
+    box-shadow: 0 0 2px #f3eae8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  #buton-crear-cuenta:hover {
+    transform: scale(1.1);
+    
+  }
+
+  #buton-iniciar-cuenta{
+    background-color: #310a0b;
+    color:#f3eae8;
+    transition: transform 0.3s ease,color 0.3s ease;
+  }
+
+  #buton-iniciar-cuenta:hover{
+    transform: scale(1.1);
+
+  }
+
+  .transition-menu{
+   width:40%;
+   height:100%;
+   background-color: #310a0b;
+   border: 1px solid #000;
+   border-radius: 15px 0 0px 15px;
+   box-shadow: 0 0 3px #000;
+   
+  }
+
+  
+ .title_transition-menu{
+text-align: center;
+ margin: 20px;
+ font-size: 55px;
+color: #f3eae8;
+text-shadow:0 0 3px #f3eae8;
+ }
+
+ .img_transition-menu{
+   height: 100px;
+   width: 120px;
+ }
+ .menu-options_container{
+  width: 60%;
+  height: 70px;
+  background-color: #f3eae8;
+  position: absolute;
+  bottom:0;
+ right: 0;
+ border: 2px solid #000;
+ border-radius: 0 0 15px 0px;
+ }
