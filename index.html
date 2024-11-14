@@ -3,82 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="styles.css">
-       <link rel="script" href="script.js">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>prueba</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>formulario</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
+<div class="wrapper">
     <div class="container">
-        <div class="form-human_container">
-            <form>
-                <h1 id="titulo1">Iniciar secion</h1>
-                <div class="input-form">
-                    <input id="Usuario"    class="inputs-form_input" type="text" placeholder="usario">
-                    <input  class="inputs-form_input" type="password" placeholder="contraseña">
+        <div class="steps-container">
+            <div class="steps-container_title">
+                <div class="title_container-title">
+                    <div class="image_title-container"></div>
                 </div>
-              <div class="botones-form">
-                <button     id="buton-iniciar-cuenta"   class="buttons-iniciar-sesion" type="submit">iniciar Secion</button>
-                <button id="buton-crear-cuenta"  class="buttons-iniciar-sesion"  type="button">Crear Nueva Cuenta</button>
-              </div>
-            </form>
-        </div>
-            <div class="form-pet_container" style="display: none;">
-                <form>
-                    <h1>Registra a tu Mascota</h1> 
-                    <label for="Nombre">Nombre</label>
-                    <input type="text" placeholder="Nombre De La Mascota">
-                    <label for="Raza">Raza</label>
-                    <input type="text" placeholder="Raza">
-                    <label for="Nacimiento">Nacimiento</label>
-                    <input type="text" placeholder="Nacimiento De la Mascota">
-                    <label>Foto Mascota</label>
-                    <input type="text" placeholder="Url">
-
-            <div class="form_inputs-cheackbox">
-                        <div class="inputs-cheackbox_genero">
-                         <h4>Genero</h4>
-                         <label for="Femenino">Femenino</label>
-                         <input type="checkbox">
-                         <label for="Masculino">Masculino</label>
-                         <input type="checkbox">
-                        </div>
-                        <div class="inputs-cheackbox_Vacunado">
-                            <h4>Esterilizado/a o Castrado/a</h4>
-                            <label for="si">Si</label>
-                            <input type="checkbox">
-                            <label for="no">No</label>
-                            <input type="checkbox">
-                           </div>
-                           <div class="inputs-cheackbox_peso">
-                                 <h4>Peso</h4>
-                                 <label for="0-25lbs">0-25lbs</label>
-                                 <input type="checkbox">
-                                 <label for="25-50lbs">25-50lbs</label>
-                                 <input type="">
-                                 <label for="50-100lbs">50-100lbs</label>
-                                 <input type="checkbox">
-                                 <label for="100+lbs">100+lbs</label>
-                                 <input type="checkbox">
-                           </div>
+            </div>
+            <div class="steps-container_progress-steps">
+                <div class="progress-steps_items-steps">
+                    <div class="items_steps">
+                        <div class="steps"></div>
                     </div>
-                </form>
+                    <div class="items_steps">
+                        <div class="steps"></div>
+                    </div>
+                    <div class="items_steps">
+                        <div class="steps"></div>
+                    </div>
+                    <div class="items_steps">
+                        <div class="steps"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="steps-container_image">
+                <div class="image-pet"></div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form-container_title">
+                <h1 class="title-form">Yay,we love dogs ! Give us the basics about your pup</h1>
+            </div>
+            <div class="form_container-inputs">
+                <div class="container-inputs">
+                    <div class="container_input">
+                        <div class="input-wrapper">
+                            <span>
+                                <label for="Name">Name </label>
+                                <input  name="Name" type="text" class="input-text">
+                            </span>                        
+                        </div>
+                    </div>
+                    <div class="container_input">
+                        <div class="input-wrapper">
+                            <span>
+                                <label for="Name">Name </label>
+                                <input  name="Name" type="text" class="input-text">
+                            </span>  
+                        </div>
+                    </div>
+                    <div class="container_input">
+                        <div class="input-wrapper">
+                            <span>
+                                <label for="Name">Name </label>
+                                <input  name="Name" type="text" class="input-text">
+                            </span>  
+                        </div>
+                    </div>
+                    <div class="container_input">
+                        <div class="input-wrapper">
+                            <span>
+                                <label for="Name">Name </label>
+                                <input  name="Name" type="text" class="input-text">
+                            </span>  
+                        </div>
+                    </div>
+                   <div class="container_input">
+                    <div class="input-wrapper">
+
+                    </div>
+                   </div>
+                   <div class="container_input">
+                    <div class="input-wrapper">
+
+                    </div>
+                   </div>
+                   <div class="container_input">
+                    <div class="input-wrapper">
+
+                    </div>
+                   </div>
+                </div>
                
             </div>
-       
-            <div class="menu-options_container">
-                <button class="button_menu-options"   type="button">Atras</button>
-                <button class="button_menu-options" type="button">Siguiente</button>
+            <div class="form-container_actions">
+             <div class="container_actions-button"></div>
+             <div class="container_actions-button"></div>
             </div>
-        <div class="transition-menu">
-            <h1 class="title_transition-menu">Super Mascotas</h1>
-      
+        </div>
     </div>
-
-    </div>
+</div>
 </body>
 </html>
+
+
 

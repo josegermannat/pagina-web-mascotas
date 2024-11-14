@@ -1,201 +1,184 @@
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 body{
-    
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: center;
- 
+  background-color: aqua;
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
+.wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container{
-position: relative;
-    margin-top: 200px;
-    width: 1200px;
-    height: 700px;
-   position: relative;
-    background-color: #887673;
-   border: 2px solid #000;
-   border-radius: 20px;
-   box-shadow:0 0 8px #000;
+  width: 75%;
+  height: 55%;
+  background-color: aqua;
+  display: flex;
+  overflow: hidden;
+  border:2px solid #000;
+border-radius: 20px;
 }
-.form-human_container{
-position: absolute;
-top: 100px;
-right: 70px;
-
-
+.steps-container{
+  width: 40%;
+  height: 100%;
+  background-color: blue;
 }
-.input-form{
-    display: flex;
-    flex-direction: column;
-    outline: none;
-    
+.form-container{
+  width:60%;
+  height: 100%;
+  background-color: pink;
 }
-.inputs-form_input{
-    font-size: 20px;
-    margin: 20px;
-    width: 420px;
-    height: 40px;
-    border: 1px solid #000;
-    border-radius: 20px;
-    background-color: #f3eae8;
-    box-shadow: 0 0 4px #60707d;
-    padding: 7px;
- 
-    outline: none;
+.steps-container_title{
+width:100%;
+height: 20%;
+background-color: aquamarine;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
 }
-
-.inputs-form_input::placeholder{
-padding-left: 8px;
-font-family: sans-serif;
-font-size: 20px;
-color: #310a0b ;
-
-
- }
- input:hover{
-  transition: all .2s ease-in-out;
-  transform: scale(1.04);
- }
-
-#titulo1{
-  text-shadow: 0 0 2px #f3eae8;
-    font-size: 60px;
-    color: #f3eae8;
-    position: relative;
-    left: 60px;
-    margin-bottom: 20px;
-
-
+.steps-container_progress-steps{
+  width: 100%;
+  height: 45%;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
-.botones-form{
-
-display: inline-block;
-height: 30px;
-
+.steps-container_image{
+  width: 100%;
+  height:35%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
 }
-
-.buttons-iniciar-sesion{
-width: 100%;
-margin: 20px;
+.form-container_title{
+  width:100%;
+height: 20%;
+background-color: antiquewhite;
+display: flex;
+justify-content: center;
+align-items: center;
 padding: 10px;
-border: 1px solid #310a0b;
-border-radius: 15px;
-color: #fff;
-font-size: 20px;
-box-shadow: 0 0 4px #310a0b;
 
 }
-#buton-crear-cuenta{
-    background-color: #fff;
-    color: #310a0b;
+.title-form{
+  margin: 20px;
+  display: inline-block;
+ font-size: 35px;
+ color: #6e7886;
+ font-weight: 700;
+ 
 }
-.buttons-iniciar-sesion:hover {
-    transform: scale(1.1); /* Aumenta el tamaño del botón */
-    background-color: #4d5b64; /* Cambia el color de fondo al pasar el mouse */
-  }
+.form_container-inputs{
+  width: 100%;
+  height: 67%;
+  background-color:antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  #buton-crear-cuenta {
-    background-color: #f3eae8;
-    color: #310a0b;
-    border: 1px solid #f3eae8;
-    box-shadow: 0 0 2px #f3eae8;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  }
+}
+.form-container_actions{
+  width: 100%;
+  height: 13%;
+  background-color: blue;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0px 6%;
+}
+.title_container-title{
+width: 55%;
+height: 40%;
+background-color: red;
+display: flex;
+justify-content: start;
+}
+.image_title-container{
+ width: 30%;
+ height: 100%;
+background-color: black;
+}
+.progress-steps_items-steps{
+height: 90%;
+width: 70%;
+background-color: blue;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.items_steps{
+width: 70%;
+height: 30%;
+background-color: black;
+margin:10px;
+display: flex;
+justify-content: start;
+}
+.steps{
+height:100%;
+width:30%;
+background-color: azure;
+}
+.image-pet{
+  width:70%;
+  height: 100%;
+  background-color: green;
+}
+
+.container-inputs{
+  width: 90%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+ flex-wrap: wrap;
+  align-items:flex-start;
   
-  #buton-crear-cuenta:hover {
-    transform: scale(1.1);
-    
-  }
-
-  #buton-iniciar-cuenta{
-    background-color: #310a0b;
-    color:#f3eae8;
-    transition: transform 0.3s ease,color 0.3s ease;
-  }
-
-  #buton-iniciar-cuenta:hover{
-    transform: scale(1.1);
-
-  }
-
-  .transition-menu{
-   width:40%;
-   height:100%;
-   background-color: #310a0b;
-   border: 1px solid #000;
-   border-radius: 15px 0 0px 15px;
-   box-shadow: 0 0 3px #000;
-   
-  }
-
   
- .title_transition-menu{
-text-align: center;
- margin: 20px;
- font-size: 55px;
-color: #f3eae8;
-text-shadow:0 0 3px #f3eae8;
- }
+}
+.container_input{
+  width:50%;
+  height: 25%;
+  background-color: aquamarine;
+  border: 1px solid #000;
+  padding:10px;
+}
+.container_input:last-child{
+  flex-grow: 2;
+  background-color: #000;
+}
+.input-wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow:hidden ;
+}
+.input-wrapper span{
+max-width: 100%;
+}
+.input-text{
+width: 100%;
+height:30px;
+outline: none;
+border:1px solid #000;
+border-radius: 4px;
+}
+.container_actions-button{
+width: 30%;
+height: 60%;
+background-color: green;
 
- .img_transition-menu{
-   height: 100px;
-   width: 120px;
- }
- .menu-options_container{
-  width: 60%;
-  height: 70px;
-  background-color: #f3eae8;
-  position: absolute;
-  bottom:0;
- right: 0;
- border: 2px solid #000;
- border-radius: 0 0 15px 0px;
- }
+}
