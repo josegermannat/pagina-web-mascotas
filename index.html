@@ -9,40 +9,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Assistant:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/46b790968f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <div class="wrapper">
     <div class="container">
         <div class="steps-container">
             <div class="steps-container_title">
                 <div class="title_container-title">
-                    <div class="image_title-container"></div>
+                    <div class="image_title-container">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <span class="title-steps"><h1>PAWTASTIC</h1> </span>
                 </div>
             </div>
             <div class="steps-container_progress-steps">
                 <div class="progress-steps_items-steps">
                     <div class="items_steps">
-                        <div class="steps"></div>
+                        <div  tabindex="0" class="steps"></div>
                     </div>
                     <div class="items_steps">
-                        <div class="steps"></div>
+                        <div id="steps1"  tabindex="0" class="steps">
+                        </div>
                     </div>
                     <div class="items_steps">
-                        <div class="steps"></div>
+                        <div  tabindex="0" class="steps"></div>
                     </div>
                     <div class="items_steps">
-                        <div class="steps"></div>
+                        <div  tabindex="0" class="steps"></div>
                     </div>
                 </div>
             </div>
             <div class="steps-container_image">
-                <div class="image-pet"></div>
+                <div class="image-pet">
+                </div>
             </div>
         </div>
+      
         <div class="form-container">
             <div class="form-container_title">
-                <h1 class="title-form">Yay,we love dogs ! Give us the basics about your pup</h1>
+                <div class="container-title">
+                    <h1 class="title-form">Yay,we love dogs ! Give us the basics about your pup.</h1>
+                </div>
             </div>
             <div class="form_container-inputs">
                 <div class="container-inputs">
@@ -50,31 +63,31 @@
                         <div class="input-wrapper">
                             <span>
                                 <label for="Name">Name </label>
-                                <input  name="Name" type="text" class="input-text">
+                                <input  id="Name" type="text" class="input-text" placeholder="Pet name">
                             </span>                        
                         </div>
                     </div>
                     <div class="container_input">
                         <div class="input-wrapper">
                             <span>
-                                <label for="Name">Name </label>
-                                <input  name="Name" type="text" class="input-text">
+                                <label for="Birthday">Birthday </label>
+                                <input  id="Birthday"  type="text" class="input-text" placeholder="MM/DD/YYYY">
                             </span>  
                         </div>
                     </div>
                     <div class="container_input">
                         <div class="input-wrapper">
                             <span>
-                                <label for="Name">Name </label>
-                                <input  name="Name" type="text" class="input-text">
+                                <label for="Bread">Bread </label>
+                                <input id="Bread"   type="text" class="input-text" placeholder=" Pets bread">
                             </span>  
                         </div>
                     </div>
                     <div class="container_input">
-                        <div class="input-wrapper">
+                        <div class="input-wrapper input-wrapper_button">
                             <span>
-                                <label for="Name">Name </label>
-                                <input  name="Name" type="text" class="input-text">
+                                <button id="photo" type="button" class="button-photo"> <i class="fa-solid fa-camera-retro"></i></button>
+                                <label class="label-buttom" for="photo">Upload photo</label>
                             </span>  
                         </div>
                     </div>
@@ -97,8 +110,13 @@
                
             </div>
             <div class="form-container_actions">
-             <div class="container_actions-button"></div>
-             <div class="container_actions-button"></div>
+             <div class="container_actions-button">
+                <button type="button" class="button-back ">Back</button>
+             </div>
+             <div class="container_actions-button">
+                <button type="button" class="button-next">Next</button>
+            </div>
+             </div>
             </div>
         </div>
     </div>
