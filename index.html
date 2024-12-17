@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abel&family=Assistant:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/46b790968f.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -32,21 +33,25 @@
                 <div class="progress-steps_items-steps">
                     <div class="items_steps">
                         <div  tabindex="0" class="steps"></div>
+                        <h3>Human profile</h3>
                     </div>
                     <div class="items_steps">
-                        <div id="steps1"  tabindex="0" class="steps">
-                        </div>
+                        <div id="steps1"  tabindex="0" class="steps"></div>
+                        <h3>Pets profile</h3>
                     </div>
                     <div class="items_steps">
                         <div  tabindex="0" class="steps"></div>
+                        <h3>Details pets</h3>
                     </div>
                     <div class="items_steps">
                         <div  tabindex="0" class="steps"></div>
+                        <h3>Confirm</h3>
                     </div>
                 </div>
             </div>
             <div class="steps-container_image">
                 <div class="image-pet">
+                    <img src="https://github.com/josegermannat/pagina-web-mascotas/blob/master/baptist-standaert-mx0DEnfYxic-unsplash-removebg.png?raw=true" alt="">
                 </div>
             </div>
         </div>
@@ -86,24 +91,59 @@
                     <div class="container_input">
                         <div class="input-wrapper input-wrapper_button">
                             <span>
+                                <input id="file" type="file" onchange="previewImage(event, '#imgPreview' )">
                                 <button id="photo" type="button" class="button-photo"> <i class="fa-solid fa-camera-retro"></i></button>
-                                <label class="label-buttom" for="photo">Upload photo</label>
+                                <label id="label-for-button" class="label-buttom" for="photo">Upload photo</label>
+                                <img  id="imgPreview" src="" >
                             </span>  
                         </div>
                     </div>
                    <div class="container_input">
-                    <div class="input-wrapper">
-
+                    <div class="input-wrapper  wrapper_checkbox">
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="Female" class="input-check">
+                            <label for="Female" class="custom-label">Female</label>
+                        </span>
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="male" class="input-check">
+                            <label for="male" class="custom-label">Male</label>
+                           
+                        </span>
                     </div>
                    </div>
                    <div class="container_input">
-                    <div class="input-wrapper">
-
+                    <div class="input-wrapper wrapper_checkbox">
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="yes" class="input-check">
+                            <label for="yes" class="custom-label">Yes</label>
+                        </span>
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="no" class="input-check">
+                            <label for="no" class="custom-label">No</label>
+                           
+                        </span>
                     </div>
                    </div>
                    <div class="container_input">
-                    <div class="input-wrapper">
-
+                    <div class="input-wrapper wrapper_checkbox">
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="0.25" class="input-check">
+                            <label for="0.25" class="custom-label">0 - 25</label>
+                        </span>
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="25.50" class="input-check">
+                            <label for="25.50" class="custom-label">25 - 50</label>
+                           
+                        </span>
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="50.100" class="input-check">
+                            <label for="50.100" class="custom-label">50 - 100</label>
+                        </span>
+                        <span class="container_cheack-box">
+                            <input type="checkbox" id="+100" class="input-check">
+                            <label for="+100" class="custom-label">100 + </label>
+                           
+                        </span>
                     </div>
                    </div>
                 </div>
@@ -114,13 +154,14 @@
                 <button type="button" class="button-back ">Back</button>
              </div>
              <div class="container_actions-button">
-                <button type="button" class="button-next">Next</button>
+                <button id="button-next" class="button-next"> Next</button>
             </div>
              </div>
             </div>
         </div>
     </div>
 </div>
+<script src="script.js"></script>
 </body>
 </html>
 
