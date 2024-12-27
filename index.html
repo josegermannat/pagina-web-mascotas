@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prueba</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
             <div class="steps-container_progress-steps">
                 <div class="progress-steps_items-steps">
                     <div class="items_steps">
-                        <div  tabindex="0" class="steps"></div>
+                        <div   id="steps0" tabindex="0" class="steps"></div>
                         <h3>Human profile</h3>
                     </div>
                     <div class="items_steps">
@@ -40,11 +40,11 @@
                         <h3>Pets profile</h3>
                     </div>
                     <div class="items_steps">
-                        <div  tabindex="0" class="steps"></div>
+                        <div   id="steps2" tabindex="0" class="steps"></div>
                         <h3>Details pets</h3>
                     </div>
                     <div class="items_steps">
-                        <div  tabindex="0" class="steps"></div>
+                        <div  id="steps3"  tabindex="0" class="steps"></div>
                         <h3>Confirm</h3>
                     </div>
                 </div>
@@ -55,8 +55,118 @@
                 </div>
             </div>
         </div>
-      
-        <div class="form-container">
+        <div  id="form1"   class="form-human-profile-container">
+            <div class="form-container_title">
+                <div class="container-title">
+                    <h1 class="title-form">Hello! please a tell us a little bit about yourself</h1>
+                </div>
+            </div>
+         <div  class="form_container-inputs">
+            <div class="container-inputs">
+                <div class="container_input">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="FirstName">Firts Name </label>
+                            <input  id="FirstName" type="text" class="input-text" placeholder="First Name">
+                        </span>                        
+                    </div>
+                </div>
+
+                <div class="container_input">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="secondName">last Name </label>
+                            <input  id="secondName" type="text" class="input-text" placeholder="Last Name">
+                        </span>                        
+                    </div>
+                </div>
+                <div class="container_input">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="Phone">Phone </label>
+                            <input  id="Phone" type="text" class="input-text" placeholder="000-0000-0000">
+                        </span>                        
+                    </div>
+                </div>
+
+                <div class="container_input">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="gmail">Gmail</label>
+                            <input  id="gmail" type="text" class="input-text" placeholder="acount@gmail.com">
+                        </span>                        
+                    </div>
+                </div>
+
+
+                <div class="container_input especial">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="streetAddress">Stree tAddress </label>
+                            <input  id="streetAddress" type="text" class="input-text" placeholder="Street Address">
+                        </span>                        
+                    </div>
+                </div>
+                
+                <div class="container_input especial">
+                    <div class="input-wrapper">
+                        <span>
+                            <label for="City">City</label>
+                            <input  id="City" type="" class="input-text" placeholder="Your City">
+                        </span>    
+            
+                                <span>
+                                    <label for="Birthday">Birthday </label>
+                                    <input  id="Birthday"  type="text" class="input-text" placeholder="MM/DD/YYYY">
+                                </span>        
+                    </div>
+
+                    
+                </div>
+
+            </div>
+         </div>
+         <div    class="form-container_actions">
+            <div class="container_actions-button">
+               <button   type="button" class="button-back">Back</button>
+            </div>
+            <div class="container_actions-button">
+               <button type="button"  class="button-next"> Next</button>
+           </div>
+            </div>  
+          </div>
+
+
+              <div  id="form3"   class="form-detailes-pets">
+                <div class="form-container_title">
+                    <div class="container-title">
+                        <h1 class="title-form">tell us a little about your dog</h1>
+                    </div>
+                </div>
+             <div  class="form_container-inputs">
+                <div class="container-inputs">
+                    <div class="container_input container-input-detailes">
+                        <div >
+                            <span>
+                                <label  class="label-detailes"  for="Details">Escribe sobre tu mascota</label>
+                                <textarea class="input-text" name="Details" id="detailesPets" placeholder="Mi mascota es la mejor de todas..."></textarea>
+                            </span>                        
+                        </div>
+                    </div>
+
+                </div>
+             </div>
+             <div    class="form-container_actions">
+                <div class="container_actions-button">
+                   <button   type="button" class="button-back">Back</button>
+                </div>
+                <div class="container_actions-button">
+                   <button type="button"  class="button-next"> Next</button>
+               </div>
+                </div>  
+              </div>
+              
+        <div  id="form2" class="form-pets-container">
             <div class="form-container_title">
                 <div class="container-title">
                     <h1 class="title-form">Yay,we love dogs ! Give us the basics about your pup.</h1>
@@ -124,7 +234,7 @@
                         </span>
                     </div>
                    </div>
-                   <div class="container_input">
+                   <div class="container_input especial">
                     <div class="input-wrapper wrapper_checkbox">
                         <span class="container_cheack-box">
                             <input type="checkbox" id="0.25" class="input-check">
@@ -151,16 +261,17 @@
             </div>
             <div class="form-container_actions">
              <div class="container_actions-button">
-                <button type="button" class="button-back ">Back</button>
+                <button   type="button" class="button-back">Back</button>
              </div>
              <div class="container_actions-button">
-                <button id="button-next" class="button-next"> Next</button>
+                <button  class="button-next"> Next</button>
             </div>
              </div>
             </div>
         </div>
     </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

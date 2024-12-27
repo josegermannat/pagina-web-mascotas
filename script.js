@@ -8,6 +8,85 @@ const weightDe50a100 = document.getElementById("50.100");
 const weightmas100 = document.getElementById("+100");
 const buttonPhoto = document.getElementById("photo");
 const inputFile  = document.getElementById("file")
+let acumulador = 1;
+const buttonNext = document.querySelectorAll(".button-next");
+const buttonBack = document.querySelectorAll(".button-back");
+const steps0 = document.getElementById("steps0");
+const steps1 = document.getElementById("steps1");
+const steps2 = document.getElementById("steps2");
+const steps3 = document.getElementById("steps3");
+const formHuman = document.getElementById("form1");
+const formPets = document.getElementById("form2");
+const formDetails = document.getElementById("form3");
+
+
+
+steps0.classList.add("steps-focused");
+formPets.classList.add("remove");
+formDetails.classList.add("remove");
+
+buttonNext.forEach(button => {
+  button.addEventListener("click", () => {
+    if(acumulador < 4){
+      acumulador += 1;
+  switch(acumulador){
+    case 1: steps0.classList.add("steps-focused")
+          
+    break;
+    case 2: steps1.classList.add("steps-focused")
+             steps0.classList.remove("steps-focused")     
+             formPets.classList.remove("remove");
+             formHuman.classList.add("remove")
+           
+    break;
+    case 3: steps2.classList.add("steps-focused")
+             steps1.classList.remove("steps-focused")
+             formPets.classList.add("remove");
+             formDetails.classList.remove("remove");
+    break;
+    case 4: steps3.classList.add("steps-focused")
+            steps2.classList.remove("steps-focused")
+    break;
+  }console.log(acumulador);
+    }
+  
+  })
+
+
+
+})
+
+
+buttonBack.forEach(Button =>{
+  Button.addEventListener("click", () =>{
+    if(acumulador > 0){
+      acumulador -= 1;
+      switch(acumulador){
+        case 1: steps0.classList.add("steps-focused")
+                 steps1.classList.remove("steps-focused")
+                formPets.classList.add("remove");
+                formHuman.classList.remove("remove");
+        break;
+        case 2: steps1.classList.add("steps-focused")
+                steps2.classList.remove("steps-focused")
+                formPets.classList.remove("remove");
+                formDetails.classList.add("remove");
+        break;
+        case 3: steps2.classList.add("steps-focused")
+                 steps3.classList.remove("steps-focused")
+        break;
+        case 4: steps3.classList.add("steps-focused")
+                steps4.classList.remove("steps-focused")
+        break;
+      }console.log(acumulador);
+  
+    }
+  })
+  
+  
+
+
+})
 
 buttonPhoto.addEventListener("click", () => {
 inputFile.click();
@@ -46,8 +125,8 @@ checkYes.addEventListener("change", () => {
     checkYes.checked = checkNo.disabled;
 });
   
-const button = document.getElementById("button-next");
-button.addEventListener("click", obtenerDetallesPet);
+
+buttonNext.addEventListener("click", obtenerDetallesPet);
 
 function obtenerDetallesPet(){
 const perro = {};
