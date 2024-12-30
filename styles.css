@@ -32,6 +32,12 @@ body{
   
 }
 
+.form-confirm{
+  width:60%;
+  height: 100%;
+  background-color: pink;
+}
+
 
 .form-pets-container{
   width:60%;
@@ -216,7 +222,7 @@ mix-blend-mode:overlay;
 .container-inputs{
   width: 90%;
   height: 100%;
-  background-color: yellow;
+ 
   display: flex;
  flex-wrap: wrap;
   align-items:flex-start;
@@ -251,6 +257,7 @@ flex-wrap: wrap;
   font-size: 25px;
   position: relative;
   left: 3px;
+   color: #52566F
 }
 
 #detailesPets{
@@ -263,6 +270,7 @@ opacity: 0.6;
 border: 1px solid #C9C4CB;
 }
 #detailesPets::placeholder{
+  opacity: 0.6;
   color:#52566F;
   font-family: "Roboto", sans-serif;
   font-size: 19px;
@@ -289,7 +297,7 @@ border:1px solid #fff;
 border-radius: 4px;
 color: #52566F;
 transition: all ease-in 0.1s;
-
+font-size: 18px;
 }
 .input-text:focus{
   padding:10px 10px;
@@ -297,6 +305,12 @@ transition: all ease-in 0.1s;
    opacity: 0.8;
 }
 
+
+.form-confirm{
+  width:60%;
+  height: 100%;
+  background-color: pink;
+}
 
 .container_actions-button{
 width: 30%;
@@ -426,6 +440,37 @@ width: 60px;
 border: 1px solid #F7ECEB;
 box-shadow: 0 0 3px #4E526C;
 border-radius: 10px;
+
+}
+
+
+.photoPreview2{
+  height: 350px;
+  width: 45%;
+  border: 1px solid #F7ECEB;
+  box-shadow: 0 0 3px #4E526C;
+  border-radius: 10px;
+  
+  
+  }
+  .container-image-pet-confirm{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  }
+.parrafo-confirm{
+  display: inline-block;
+  width: 50%;
+position: relative;
+bottom: 140px;
+left: 20px;
+font-size: 21px;
+color: #4E526C;
+text-align: center;
+text-shadow: 0 0 1px #52566F;
 
 }
 

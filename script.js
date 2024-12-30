@@ -18,16 +18,18 @@ const steps3 = document.getElementById("steps3");
 const formHuman = document.getElementById("form1");
 const formPets = document.getElementById("form2");
 const formDetails = document.getElementById("form3");
-
-
+const formConfirm =  document.getElementById("form4");
 
 steps0.classList.add("steps-focused");
 formPets.classList.add("remove");
 formDetails.classList.add("remove");
+formConfirm.classList.add ("remove");
+
 
 buttonNext.forEach(button => {
   button.addEventListener("click", () => {
-    if(acumulador < 4){
+  
+    if(acumulador <= 4){
       acumulador += 1;
   switch(acumulador){
     case 1: steps0.classList.add("steps-focused")
@@ -37,16 +39,23 @@ buttonNext.forEach(button => {
              steps0.classList.remove("steps-focused")     
              formPets.classList.remove("remove");
              formHuman.classList.add("remove")
-           
+          
     break;
     case 3: steps2.classList.add("steps-focused")
              steps1.classList.remove("steps-focused")
              formPets.classList.add("remove");
              formDetails.classList.remove("remove");
+            
     break;
     case 4: steps3.classList.add("steps-focused")
             steps2.classList.remove("steps-focused")
+            formDetails.classList.add("remove");
+            formConfirm.classList.remove("remove");
+            ObtenerImagenConfirm()
+            obtenerParrafo(obtenerDetallesPet());
+           buttonNext.forEach(btn => btn.innerHTML = "confirm");
     break;
+    
   }console.log(acumulador);
     }
   
@@ -74,9 +83,15 @@ buttonBack.forEach(Button =>{
         break;
         case 3: steps2.classList.add("steps-focused")
                  steps3.classList.remove("steps-focused")
+                 formDetails.classList.remove("remove");
+                 formConfirm.classList.add("remove");
+                 buttonNext.forEach(btn => btn.innerHTML = "next");
+                 
         break;
         case 4: steps3.classList.add("steps-focused")
                 steps4.classList.remove("steps-focused")
+                
+               
         break;
       }console.log(acumulador);
   
@@ -126,12 +141,26 @@ checkYes.addEventListener("change", () => {
 });
   
 
-buttonNext.addEventListener("click", obtenerDetallesPet);
+
+
+function obtenerDetallesHuman(){
+const human = {};
+human.FirstName = document.getElementById("FirstName").value;
+human.LastName = document.getElementById("secondName").value;
+human.Phone = document.getElementById("Phone").value;
+human.Gmail = document.getElementById("gmail").value;
+human.StreetAddress = document.getElementById("streetAddress").value;
+human.City = document.getElementById("City").value;
+human.Birthday = document.getElementById("Birthday1").value;
+
+
+console.log(human);
+}
 
 function obtenerDetallesPet(){
 const perro = {};
 perro.name = document.getElementById("Name").value;
-perro.Birthday = document.getElementById("Birthday").value;
+perro.Birthday = document.getElementById("Birthday2").value;
 perro.bread = document.getElementById("Bread").value;
  
 
@@ -164,13 +193,33 @@ perro.bread = document.getElementById("Bread").value;
   const inputFileValue = inputFile.value;
   perro.photo = inputFileValue;
  
-console.log(perro);
+return perro;
  }
+function ObtenerImagenConfirm(){
+  const imgPreview2 = document.getElementById("imgPreview2");
+  const input = document.getElementById("file");
+
+  if(!input.files.length) return
+
+  const files = input.files.length;
+        
+  const file = input.files[0];
+  
+  const objectURL = URL.createObjectURL(file);
+  imgPreview2.src = objectURL;
+  imgPreview2.classList.add("photoPreview2");
+}
+ function obtenerParrafo(obtenerDetallesPet) {  
+  const parrafo = document.getElementById("parrafoConfirm");
+  parrafo.innerHTML = "Well done! Just one more step left. Please confirm the details of " + obtenerDetallesPet.name  + " to complete the process. We look forward to welcoming you."
+}
+
 
 function previewImage(event, selector){
   console.log(event);
   const input = event.target;
     const  imgPreview = document.querySelector(selector);
+    
 
   if(!input.files.length) return
 
