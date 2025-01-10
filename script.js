@@ -9,8 +9,6 @@ const weightmas100 = document.getElementById("+100");
 const buttonPhoto = document.getElementById("photo");
 const inputFile  = document.getElementById("file")
 let acumulador = 1;
-const buttonNext = document.querySelectorAll(".button-next");
-const buttonBack = document.querySelectorAll(".button-back");
 const steps0 = document.getElementById("steps0");
 const steps1 = document.getElementById("steps1");
 const steps2 = document.getElementById("steps2");
@@ -19,6 +17,8 @@ const formHuman = document.getElementById("form1");
 const formPets = document.getElementById("form2");
 const formDetails = document.getElementById("form3");
 const formConfirm =  document.getElementById("form4");
+const textarea = document.getElementById("detailesPets");
+
 
 steps0.classList.add("steps-focused");
 formPets.classList.add("remove");
@@ -26,82 +26,7 @@ formDetails.classList.add("remove");
 formConfirm.classList.add ("remove");
 
 
-buttonNext.forEach(button => {
-  button.addEventListener("click", () => {
-  
-    if(acumulador <= 4){
-      acumulador += 1;
-  switch(acumulador){
-    case 1: steps0.classList.add("steps-focused")
-          
-    break;
-    case 2: steps1.classList.add("steps-focused")
-             steps0.classList.remove("steps-focused")     
-             formPets.classList.remove("remove");
-             formHuman.classList.add("remove")
-          
-    break;
-    case 3: steps2.classList.add("steps-focused")
-             steps1.classList.remove("steps-focused")
-             formPets.classList.add("remove");
-             formDetails.classList.remove("remove");
-            
-    break;
-    case 4: steps3.classList.add("steps-focused")
-            steps2.classList.remove("steps-focused")
-            formDetails.classList.add("remove");
-            formConfirm.classList.remove("remove");
-            ObtenerImagenConfirm()
-            obtenerParrafo(obtenerDetallesPet());
-           buttonNext.forEach(btn => btn.innerHTML = "confirm");
-    break;
-    
-  }console.log(acumulador);
-    }
-  
-  })
 
-
-
-})
-
-
-buttonBack.forEach(Button =>{
-  Button.addEventListener("click", () =>{
-    if(acumulador > 0){
-      acumulador -= 1;
-      switch(acumulador){
-        case 1: steps0.classList.add("steps-focused")
-                 steps1.classList.remove("steps-focused")
-                formPets.classList.add("remove");
-                formHuman.classList.remove("remove");
-        break;
-        case 2: steps1.classList.add("steps-focused")
-                steps2.classList.remove("steps-focused")
-                formPets.classList.remove("remove");
-                formDetails.classList.add("remove");
-        break;
-        case 3: steps2.classList.add("steps-focused")
-                 steps3.classList.remove("steps-focused")
-                 formDetails.classList.remove("remove");
-                 formConfirm.classList.add("remove");
-                 buttonNext.forEach(btn => btn.innerHTML = "next");
-                 
-        break;
-        case 4: steps3.classList.add("steps-focused")
-                steps4.classList.remove("steps-focused")
-                
-               
-        break;
-      }console.log(acumulador);
-  
-    }
-  })
-  
-  
-
-
-})
 
 buttonPhoto.addEventListener("click", () => {
 inputFile.click();
@@ -141,7 +66,11 @@ checkYes.addEventListener("change", () => {
 });
   
 
-
+function ObtenerDetailsPets(){
+ const details = {};
+ details.text = textarea.value;
+ return details;
+}
 
 function obtenerDetallesHuman(){
 const human = {};
@@ -154,10 +83,12 @@ human.City = document.getElementById("City").value;
 human.Birthday = document.getElementById("Birthday1").value;
 
 
-console.log(human);
+
+return human;
 }
 
 function obtenerDetallesPet(){
+  
 const perro = {};
 perro.name = document.getElementById("Name").value;
 perro.Birthday = document.getElementById("Birthday2").value;
@@ -193,7 +124,8 @@ perro.bread = document.getElementById("Bread").value;
   const inputFileValue = inputFile.value;
   perro.photo = inputFileValue;
  
-return perro;
+
+return perro;  
  }
 function ObtenerImagenConfirm(){
   const imgPreview2 = document.getElementById("imgPreview2");
@@ -262,4 +194,76 @@ if(!buttonCambiarPhoto){
      })
        }
        buttonCambiarPhoto.classList.remove("remove");
+  }
+  
+  const buttonNext = document.getElementById("next");
+  const buttonConfirm = document.getElementById("confirm");
+
+  
+   
+  function manejarContador(buttonSeleccionado){
+    if(buttonSeleccionado === "confirm"){
+      ObtenerTodosLosDetalles()
+      return null
+    }
+    if(buttonSeleccionado === "next"){
+      
+      if(acumulador < 4){
+        acumulador += 1;
+      }
+    } else{
+      if(acumulador > 1){
+        acumulador -= 1; 
+      }
+    }
+    mostrarForms()
+   console.log(acumulador);
+  }
+
+  function mostrarForms(){
+   switch(acumulador){
+
+    case 1: formPets.classList.add("remove");
+             formHuman.classList.remove("remove");
+             steps0.classList.add("steps-focused")
+             steps1.classList.remove("steps-focused")
+    break;
+    case 2:  obtenerDetallesHuman()
+             steps1.classList.add("steps-focused")
+             steps0.classList.remove("steps-focused") 
+            formHuman.classList.add("remove");
+            formPets.classList.remove("remove");
+            formDetails.classList.add("remove")
+            steps2.classList.remove("steps-focused")
+    break;
+    case 3:   obtenerDetallesPet() 
+               steps2.classList.add("steps-focused")
+              steps1.classList.remove("steps-focused")
+              formPets.classList.add("remove");
+               formDetails.classList.remove("remove");
+               formConfirm.classList.add("remove")
+               steps3.classList.remove("steps-focused")
+               buttonConfirm.classList.add("remove")
+               buttonNext.classList.remove("remove")
+       break;
+    case 4:      ObtenerDetailsPets()
+            steps3.classList.add("steps-focused")
+            steps2.classList.remove("steps-focused")
+                 formDetails.classList.add("remove");
+                 formConfirm.classList.remove("remove");
+                 ObtenerImagenConfirm()
+                 obtenerParrafo(obtenerDetallesPet());
+                buttonNext.classList.add("remove")
+                buttonConfirm.classList.remove("remove")
+                
+       break;
+
+   }
+  }
+  function ObtenerTodosLosDetalles(){
+    const form = {};
+    form.human =  obtenerDetallesHuman()
+     form.Pets = obtenerDetallesPet()
+     form.details = ObtenerDetailsPets()
+     console.log(form)
   }

@@ -32,26 +32,18 @@ body{
   
 }
 
-.form-confirm{
-  width:60%;
-  height: 100%;
-  background-color: pink;
-}
-
-
-.form-pets-container{
-  width:60%;
-  height: 100%;
-  background-color: pink;
-}
-
 .form-human-profile-container{
-  width:60%;
   height: 100%;
-  background-color: pink;
 }
-
-
+.form-pets-container{
+  height: 100%;
+}
+.form-detailes-pets{
+  height: 100%;
+}
+.form-confirm{
+  height: 100%;
+}
 
 .steps-container_title{
 width:100%;
@@ -110,7 +102,7 @@ overflow: hidden;
 }
 .form_container-inputs{
   width: 100%;
-  height: 67%;
+  height: 80%;
   background-color:#F7ECEB;
   display: flex;
   justify-content: center;
@@ -241,9 +233,8 @@ mix-blend-mode:overlay;
 align-items:center ;
 flex-wrap: wrap;
 }
-.form-detailes-pets{
-  width: 60%;
-}
+
+
 
 
 .container-input-detailes{
@@ -306,11 +297,6 @@ font-size: 18px;
 }
 
 
-.form-confirm{
-  width:60%;
-  height: 100%;
-  background-color: pink;
-}
 
 .container_actions-button{
 width: 30%;
@@ -434,8 +420,12 @@ border: 1px solid #EBD0CE;
   border-radius: 5px;
 }
 
+#streetAddress{
+  width: 200%;
+}
+
 .photoPreview{
-height: 80px;
+height: 75px;
 width: 60px;
 border: 1px solid #F7ECEB;
 box-shadow: 0 0 3px #4E526C;
@@ -446,7 +436,7 @@ border-radius: 10px;
 
 .photoPreview2{
   height: 350px;
-  width: 45%;
+  width: 49%;
   border: 1px solid #F7ECEB;
   box-shadow: 0 0 3px #4E526C;
   border-radius: 10px;
@@ -506,4 +496,19 @@ padding: 5px 8px;
 
 #streetAddress:focus{
   padding-left: 10px;
+}
+.form-container-wrapper{
+  background-color: red;
+  width: 60%;
+}
+
+.form-container{
+  height: 87%;
+  width: 100%;
+  background-color: blue;
+}
+.button-actions{
+ height: 13%;
+  width: 100%;
+  background-color: yellow;
 }
